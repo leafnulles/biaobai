@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>天才的表白方式</title>
+ <style>
+ 
+ *{margin:0;padding:0;}
+ 
+ 
+ center{
+   
+   margin-top:200px;
+   
+  }
+
+body{
+  
+  background-color:pink;
+  
+}
+
+
+h1{
+  
+  color:white
+  
+  }
+
+.ain{
+  
+  text-align:center;
+  margin-top:200px;
+  
+}
+
+
+
+#left{
+  
+  width:130px;
+  height:50px;
+  background-color:#00ff95;
+  border-style:none;
+  border-radius:8px;
+  box-shadow:5px 5px 5px #aaa;
+  font-size:23px;
+  color:white;
+  font-weight: 800;
+  position:absolute;
+  left:50px;
+  bottom:360px;
+  
+  
+}
+
+
+#right{
+  width:130px;
+  height:50px;
+  background-color:#ff0007;
+  border-style:none;
+  border-radius:8px;
+  transition:all 1s;
+  box-shadow:5px 5px 5px #aaa;
+  font-size:23px;
+  color:white;
+  font-weight: 800;
+  margin-left:20px;
+  position:absolute;
+  bottom:360px;
+  
+}
+
+    @keyframes beat{
+    0%{   transform:scale(1)}
+    
+    0%{transform:scale(1.2)}
+    }
+
+  
+ 
+  
+  .h{
+    width:200px;
+    height:200px;
+  //  text-shadow:2px 2px 20px pink;
+    margin:100px auto;
+    animation:beat 1s infinite alternate;
+}
+
+
+.lefts,.rights{
+  
+  float:left;
+  width:100px;
+  height:160px;
+  background-color:pink;
+  border-radius:50px 50px 0 0;
+  box-shadow:0px 0px 20px 0px pink;
+  
+}
+  
+  .lefts{
+    transform:translateX(29px)rotate(-45deg)
+    
+    
+}
+  
+  .rights{
+    
+    transform:translateX(-29px) rotate(45deg)
+    
+    }
+  
+  @keyframes colors{
+    25%{color:red}
+    50%{color:blue}
+    75%{color:yellow}
+    100%{color:green}
+  }
+  
+  h1{
+      color:white;
+      
+      opacity:1;
+      font-size:25px;
+  --    animation:colors 1s infinite alternate;
+      z-index:3;
+      box-shadow:yellow;
+      transition:all 1s;
+    --  position:absolute;
+      text-align:center;
+    transform:translateY(-100px)
+  }
+ 
+ </style>
+ </head>
+  <body id="body">	
+  <center>
+       <h1>
+       小姐姐，我喜欢你很久了
+       你可以做我对象吗？
+       </h1>
+       <button id="left">接受</button>
+       <button id="right"  onclick="refusal()">不接受</button>
+  </center>
+  </body>
+  <script>
+  
+  let width=innerWidth
+  let height=innerHeight
+  
+  
+  let left=document.getElementById("left")
+  let right=document.getElementById("right")
+  let body=document.getElementById("body")
+  
+  left.onclick=function(){
+  alert("小姐姐你真的考虑好了吗？");
+  while(true){
+  let ac=prompt("快输入我接受");
+  if (ac=="我接受"){
+    alert("太棒了")
+    body.style.background="black"
+    body.innerHTML="	<div class='h' id='v1'> <div class='lefts'></div> <div class='rights'></div><h1 id='textes'>杨育才♥️</h1> </div>"
+    break
+    }else{
+    alert("没事，再来一遍");
+    }
+  }
+}
+  
+  
+  
+  function refusal(){
+  right.style.transition="all 1s"
+  
+  
+  
+  right.style.left=(Math.random()*width)+"px"
+  right.style.top=(Math.random()*height)+"px"
+  
+  right.innerText="快选接受"
+  setTimeout(function (){
+  right.innerText="不接受"
+  },1000);
+  }
+  
+  
+  
+  
+  </script>
+</html>
