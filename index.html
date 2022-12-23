@@ -49,7 +49,7 @@ h1{
   font-weight: 800;
   position:absolute;
   left:50px;
-  bottom:360px;
+  bottom:200px;
   
   
 }
@@ -68,9 +68,23 @@ h1{
   font-weight: 800;
   margin-left:20px;
   position:absolute;
-  bottom:360px;
-  
+  bottom:200px;
+  left:220px;
 }
+
+
+
+img{
+  border-radius:30px;
+  box-shadow:5px 5px 8px #888;
+  position:absolute;
+  left:4px;
+  top:200px;
+  border:2px solid red;
+}
+
+
+
 
     @keyframes beat{
     0%{   transform:scale(1)}
@@ -119,6 +133,8 @@ h1{
     75%{color:yellow}
     100%{color:green}
   }
+
+
   
   h1{
       color:white;
@@ -142,8 +158,10 @@ h1{
        小姐姐，我喜欢你很久了
        你可以做我对象吗？
        </h1>
+       <img src="kkaa.gif" width="400px"/>
        <button id="left">接受</button>
        <button id="right"  onclick="refusal()">不接受</button>
+       <audio src="ye.mp3" autoplay fill></audio>
   </center>
   </body>
   <script>
@@ -158,17 +176,9 @@ h1{
   
   left.onclick=function(){
   alert("小姐姐你真的考虑好了吗？");
-  while(true){
-  let ac=prompt("快输入我接受");
-  if (ac=="我接受"){
     alert("太棒了")
     body.style.background="black"
-    body.innerHTML="	<div class='h' id='v1'> <div class='lefts'></div> <div class='rights'></div><h1 id='textes'>杨育才♥️</h1> </div>"
-    break
-    }else{
-    alert("没事，再来一遍");
-    }
-  }
+    body.innerHTML="	<div class='h' id='v1'> <div class='lefts'></div> <div class='rights'></div><h1 id='textes'>我爱你💖</h1> </div>"
 }
   
   
@@ -177,9 +187,9 @@ h1{
   right.style.transition="all 1s"
   
   
-  
-  right.style.left=(Math.random()*width)+"px"
   right.style.top=(Math.random()*height)+"px"
+  right.style.left=(Math.random()*width)+"px"
+  
   
   right.innerText="快选接受"
   setTimeout(function (){
